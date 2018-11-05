@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pertanyaan</title>
+</head>
+<body>
+    <p><b>1.siapa nama presiden indonesia yang ke-1</b></p>
+    <input id='soal1' type="radio" name='no1' value='joko widodo'>Joko Widodo
+    <input id='soal1' type="radio" name='no1' value ='Abdurrahman Wahid'>Abdurrahman Wahid
+    <input id='soal1' type="radio" name='no1' value ='Ir.Soekarno'>Ir.Soekarno
+    <input id='soal1' type="radio" name='no1' value ='Megawati'>Megawati
+
+    <p><b>2.Berikut ini adalah nama nama bahasa pemrograman kecuali...</b></p>
+    <input id='soal2' type="radio" name='no2' value="phyton">phyton
+    <input id='soal2' type="radio" name='no2' value="Micro : bit">Micro : bit
+    <input id='soal2' type="radio" name='no2' value="javascrip">javascrip
+    <input id='soal2' type="radio" name='no2' value="HTML">HTML
+
+    <p><b>3.Apa judul lagu yang diduga diplagiat oleh lagu 'sayang' via valllen </b></p>
+    <input id='soal3' type="radio" name='no3' value="Qing Fei">Qing Fei
+    <input id='soal3' type="radio" name='no3' value="Ting Hai">Ting Hai
+    <input id='soal3' type="radio" name='no3' value="Mirai E Kiroro">Mirai E Kiroro
+    <input id='soal3' type="radio" name='no3' value="Hau Siang Hau Siang">Hau Siang Hau Siang
+
+    <p><b>4.Siapa pemeran iron man?</b></p>
+    <input id='soal4' type="radio" name='no4' value="Cris Evans">Cris Evens
+    <input id='soal4' type="radio" name='no4' value="Robert Downey">Robert Downey
+    <input id='soal4' type="radio" name='no4' value="Scarlett Johansson">Scarlett Johansson
+    <input id='soal4' type="radio" name='no4' value="Tom Hiddleston">Tom Hiddleston
+    <br><br>
+</form>
+<button id='simpan' onclick="data()">submit</button>
+<br>
+<script>
+    function pertanyaan(){
+        var no1 = document.getElementById('kuis').elements['soal1'].value
+        var no1 = document.getElementById('kuis').elements['soal2'].value
+        var no1 = document.getElementById('kuis').elements['soal3'].value
+        var no1 = document.getElementById('kuis').elements['soal4'].value
+        var correct =0
+
+        if(no1 == 'Ir.Soekarno'){
+            correct = 0;
+        }
+        if(no2 =='Micro : bit'){
+            correct++;
+        }
+        if(no3 == 'Mirai E Kiroro'){
+            correct++;
+        }
+        if(no4 == 'Robert Downey'){
+            correct++;
+        }
+        var score
+        if(correct==0){
+            score = 0;
+        }
+        if(correct==1){
+            score = 25;
+        }
+        if(correct==2){
+            score = 50;
+        }
+        if(correct==3){
+            score = 75;
+        }
+        if(correct==4){
+            score = 100;
+            
+        }
+        document.getElementById('score').innerHTML = score
+        document.getElementById('simpan').innerHTML = simpan
+
+    }
+</script> 
+</body>
+</html>

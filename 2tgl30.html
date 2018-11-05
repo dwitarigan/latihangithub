@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>waktu</title>
+</head>
+<body>
+    <h1 id ='waktu'></h1>
+    <script>
+        setInterval(
+    ()=>{
+        var x = new Date()
+        var jam = x.getHours()
+        var menit = x.getMinutes()
+        var detik = x.getSeconds()
+        var noljam = ''
+        var nolmenit = ''
+        var noldetik = ''
+        var hari = x.getDay()
+        var tanggal = x.getDate()
+        var bulan = x.getMonth()
+        var tahun = x.getFullYear()
+        var harii = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu']
+        var bulann = ['januari','februari','maret','april','mei','juni','juli','juli','agustus',
+        'september','oktober','november','desember']
+
+        if(jam<10){noljam='0'}
+        if(nolmenit<10)
+        {nolmenit='0'}
+        if(noldetik<10)
+        {noldetik='0'}
+        var time = harii[hari] +', ' + tanggal + ' ' + bulan[bulann] + ' ' + tahun +' '+ noljam + jam + ':'+ nolmenit +
+         menit + ':' + noldetik + detik 
+        console.log(time)
+        document.getElementById('waktu').innerHTML = harii[hari] + ', ' + tanggal + ' '
+         + bulann[bulan] + ' ' + tahun + ' ' + noljam + jam + ':'+ nolmenit + menit +
+         ':' + noldetik + detik 
+
+    } 
+,1000
+
+)
+
+
+    </script>
+    
+</body>
+</html>

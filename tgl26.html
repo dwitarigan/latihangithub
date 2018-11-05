@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML & JS</title>
+</head>
+<body>
+    <h1>HTML & JS</h1>
+    masukkan angka 1 : <input id='angka1' type='number'/><br/><br/>
+    masukkan angka 2 : <input id='angka' type='number'/><br/><br/>
+    <button onclick="tambah()">tambah +</button>
+    <button onclick="kali()">kali x</button>
+    <button onclick="bagi()">bagi :</button>
+    <button onclick="kurang()">kurang -</button>
+    <button onclick="pangkat()">pangkat ^</button>
+    <button onclick="modulus()">modulus %</button>
+    <p id='hasil'>...</p>
+    <script>
+        function kali (){
+           var ang1 = parseInt(document.getElementById('angka1').value)
+           var ang2 = parseInt(document.getElementById('angka').value)
+             var total = ang1 * ang2
+             var hasil = document.getElementById('hasil')
+             console.log('hasil = ' + total)
+              hasil.innerHTML = 'hasil =' + total 
+        }
+
+        function tambah (){
+             var ang1 = parseInt(document.getElementById('angka1').value)
+           var ang2 = parseInt(document.getElementById('angka').value)
+             var total = ang1 + ang2
+             var hasil = document.getElementById('hasil')
+             console.log('hasil = ' + total)
+             hasil.innerHTML = 'hasil =' + total
+              
+        }
+        function bagi (){
+            var ang1 = parseInt(document.getElementById('angka1').value)
+           var ang2 = parseInt(document.getElementById('angka').value)
+             var total = ang1 / ang2
+             var hasil = document.getElementById('hasil')
+             console.log('hasil = ' + total)
+              hasil.innerHTML = 'hasil = ' + total 
+        }
+        function kurang (){
+            var ang1 = parseInt(document.getElementById('angka1').value)
+           var ang2 = parseInt(document.getElementById('angka').value)
+             var total = ang1 - ang2
+             var hasil = document.getElementById('hasil')
+             console.log('hasil = ' + total)
+              hasil.innerHTML = 'hasil = ' + total 
+        }
+        function modulus (){
+            var ang1 = parseInt(document.getElementById('angka1').value)
+           var ang2 = parseInt(document.getElementById('angka').value)
+             var total = ang1 % ang2
+             var hasil = document.getElementById('hasil')
+             console.log('hasil = ' + total)
+              hasil.innerHTML = 'hasil = ' + total 
+        }
+        function pangkat (){
+            var ang1 = parseInt(document.getElementById('angka1').value)
+           var ang2 = parseInt(document.getElementById('angka').value)
+             var total = ang1 ** ang2
+             var hasil = document.getElementById('hasil')
+             console.log('hasil = ' + total)
+              hasil.innerHTML = 'hasil = ' + total
+        }
+
+
+
+        // function tambah(){
+        //     var ang1 = parseInt(document.getElementById('angka1').value)
+        //     var ang2 = parseInt(document.getElementById('angka').value)
+        //     var total = ang1 + ang2
+        //     var hasil = document.getElementById('hasil')
+        //     console.log('hasil = ' + total)
+        //      hasil.innerHTML = 'hasil = ' + total
+          
+            
+ 
+            // if(angka % 2 == 0){ 
+            //  console.log('Angka = ' + input + ', tergolong genap')
+            //  teks.innerHTML = 'Angka = ' + input + ', tergolong genap'
+            
+
+            //  } else {
+            //  console.log('Angka = ' + input + ', tergolon ganjil')
+            //  teks.innerHTML = 'Angka = ' + input + ', tergolong ganjil' -->
+             
+
+            // }
+        //}
+           
+        
+    
+    </script>
+</body>
+</html>

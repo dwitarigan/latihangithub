@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        table {
+            width: 60%; border: 1px solid blue;
+            border-collapse: collapse;
+        }
+        th,td {
+            height: 30px; border: 1px solid blue;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body >
+    <center>
+        <input  id='nama1' type="text" placeholder="ketik nama anda...">
+        <br><br>
+        <input id='usia1' type="date" placeholder="tanggal lahir...">
+        <br><br>
+        <input id='kota1' type="text" placeholder="ketik kota anda...">
+        <br><br>
+        <button id='simpan' onclick="data()">SUBMIT</button>
+        <br><br>
+    
+
+     <table>
+        <thead id='thead'></thead>
+        <tbody id='tbody'></tbody>
+    </table > 
+    
+
+    <script>
+        var users = []
+        var users1 = []
+        function data(){
+            document.getElementById('thead').innerHTML =  
+              '<tr><th>nama</th><th>usia</th><th>kota</th></tr>'
+
+            document.getElementById('tbody').innerHTML = ''
+            var dataUser = {
+            nama :document.getElementById('nama1').value,
+            usia :document.getElementById('usia1').value,
+            kota :document.getElementById('kota1').value
+            }
+            users.push(dataUser)
+            for(i=0; i<users.length; i++){
+                var x = '<th>' + users[i].nama + '</th>' 
+                var y = '<th>' + users[i].usia + '</th>' 
+                var z = '<th>' + users[i].kota + '</th>' 
+                var x = '<tr>' + x + y + z + '</tr>'
+                document.getElementById('tbody').innerHTML += xyz
+          
+            }
+            users1.push(xyz)
+        }
+        function sortnamea(){
+            document.getElementById('tbody').innerHTML = ''
+            for(var i=0; i<users.length; i++){
+                users.sort(function(a,b){
+                    if(a.nama == b.nama){
+                        return 0;
+                    }
+                    else if(a.nama < b.nama){
+                        return -1;
+                    }
+                    else{
+                        return 1;
+                    }
+                })
+                document.getElementById('tbody').innerHTML += 
+            '<tr><th>'+users[i].nama+'</th><th>'+users[i].usia+'</th><th>'+
+                users[i].kota+'</th></tr>'
+            }
+        }
+          function sortnamea(){
+            document.getElementById('tbody').innerHTML = ''
+            for(var i=0; i<users.length; i++){
+                users.sort(function(a,b){
+                    if(a.nama == b.nama){
+                        return 0;
+                    }
+                    else if(a.nama < b.nama){
+                        return -1;
+                    }
+                    else{
+                        return 1;
+                    }
+                })
+                document.getElementById('tbody').innerHTML += 
+            '<tr><th>'+users[i].nama+'</th><th>'+users[i].usia+'</th><th>'+
+                users[i].kota+'</th></tr>'
+            }
+        }
+        function sortnameb(){
+            document.getElementById('tbody').innerHTML = ''
+            for(var i=0; i<users.length; i++){
+                users.sort(function(a,b){
+                    if(a.nama == b.nama){
+                        return 0;
+                    }
+                    else if(a.nama < b.nama){
+                        return -1;
+                    }
+                    else{
+                        return 1;
+                    }
+                })
+                document.getElementById('tbody').innerHTML += 
+            '<tr><th>'+users[i].nama+'</th><th>'+users[i].usia+'</th><th>'+
+                users[i].kota+'</th></tr>'
+            }
+        }
+        
+
+        function sortagea(){
+            document.getElementById('tbody').innerHTML = ''
+            for(var i=0; i<users.length; i++){
+                users.sort(function(a,b){
+                    return a.usia - b.usia
+                })
+                document.getElementById('tbody').innerHTML = '<tr>' + '<th>' + users[i]
+
+                }
+            }
+            
+        function sortageb(){
+            document.getElementById('tbody').innerHTML = ''
+            for(var i=0; i<users.length; i++){
+                users.sort(function(a,b){
+                    return b.usia - a.usia
+                })
+                document.getElementById('tbody').innerHTML = '<tr>' + '<th>' + users[i]
+
+                }
+            }
+            
+        
+    </script>
+    </center>
+</body>
+</html>

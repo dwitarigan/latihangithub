@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    <p>Apa Hobby Anda?</p>
+    <input id='1' value='baca' onclick='hobi()' type="checkbox"> membaca </input>
+    <input id='2' value='nulis' onclick='hobi()' type="checkbox"> menulis </input>
+    <input id='3' value='nyanyi' onclick='hobi()' type="checkbox"> menyanyi </input>
+    <p>Hobi Anda Adalah : <span id='hobiku'></span></p>
+    <script>
+        function hobi(){
+            var pilihan = []
+            for(var i=1; i<=3; i++){
+                if(document.getElementById(i).checked){
+                    pilihan.push(document.getElementById(i).value)
+                }
+            }
+            console.log(pilihan)
+            document.getElementById('hobiku').innerHTML = pilihan
+        }
+    </script>
+</body>
+</html>

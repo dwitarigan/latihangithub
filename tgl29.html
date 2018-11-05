@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+<p>pilih klib bola favorit</p>
+
+<input id='1' onclick='pilihan(this.value)' value='barca'
+ type="radio" name='bola'/>Barcelona
+
+<input id='2' onclick='pilihan(this.value)' value='madrid'
+ type="radio" name='bola'/>Real Madrid
+
+<input id='3' onclick='pilihan(this.value)' value='juve'
+ type="radio" name='bola'/>Juventus
+<br>
+<button id='tombol' value="12345" onclick="klik(this.value)">S U B M I D</button>
+
+<p id='result'>....</p>
+<script>
+    function klik(x){
+        console.log('tombol diklik! ' + x)
+        document.getElementById('result').innerHTML = x
+        console.log('anda memilih opsi = ' + x)
+        
+    }
+    function pilihan(param){
+        if(document.getElementById('1').checked){
+            document.getElementById('tombol').value = param
+            
+        } else if (document.getElementById('2').checked){
+            document.getElementById('tombol').value = param
+        }else {
+            document.getElementById('tombol').value = param
+           
+            
+        }
+    }
+</script>
+</body>
+</html>
